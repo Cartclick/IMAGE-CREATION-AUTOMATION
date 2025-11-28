@@ -10,26 +10,22 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background: #f5f7fa;
             min-height: 100vh;
             padding: 40px 20px;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
         }
-
         .card {
             background: white;
             border-radius: 16px;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             padding: 32px;
         }
-
         .header {
             display: flex;
             align-items: center;
@@ -38,21 +34,17 @@
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
         }
-
         .header-icon {
             font-size: 28px;
         }
-
         h1 {
             font-size: 24px;
             font-weight: 600;
             color: #1a1a2e;
         }
-
         .form-group {
             margin-bottom: 20px;
         }
-
         label {
             display: block;
             font-size: 14px;
@@ -60,7 +52,6 @@
             color: #444;
             margin-bottom: 8px;
         }
-
         input[type="text"],
         input[type="number"],
         input[type="url"],
@@ -73,7 +64,6 @@
             font-size: 14px;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-
         input:focus,
         select:focus,
         textarea:focus {
@@ -81,48 +71,40 @@
             border-color: #4f6ef7;
             box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.1);
         }
-
         textarea {
             resize: vertical;
             min-height: 120px;
         }
-
         .row {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 16px;
         }
-
         .row-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-
         .prompt-section {
             margin-top: 24px;
             padding-top: 24px;
             border-top: 1px solid #eee;
         }
-
         .section-title {
             font-size: 16px;
             font-weight: 600;
             color: #1a1a2e;
             margin-bottom: 16px;
         }
-
         /* Collapsible Advertorial */
         .advertorial-wrapper {
             position: relative;
         }
-
         .advertorial-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .collapse-btn {
             background: #f0f2f5;
             border: none;
@@ -133,11 +115,9 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-
         .collapse-btn:hover {
             background: #e4e6ea;
         }
-
         .advertorial-preview {
             display: none;
             padding: 12px 16px;
@@ -151,30 +131,24 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
         .advertorial-preview:hover {
             background: #f0f2f5;
         }
-
         .collapsed .advertorial-textarea {
             display: none;
         }
-
         .collapsed .advertorial-preview {
             display: block;
         }
-
         .collapsed .collapse-btn {
             display: none;
         }
-
         /* Webhook Section */
         .webhook-section {
             margin-top: 24px;
             padding-top: 24px;
             border-top: 1px solid #eee;
         }
-
         .submit-btn {
             width: 100%;
             padding: 16px 24px;
@@ -192,16 +166,13 @@
             gap: 8px;
             margin-top: 24px;
         }
-
         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(79, 110, 247, 0.3);
         }
-
         .submit-btn:active {
             transform: translateY(0);
         }
-
         /* Toast Notification */
         .toast {
             position: fixed;
@@ -217,16 +188,13 @@
             opacity: 0;
             transition: all 0.3s ease;
         }
-
         .toast.show {
             transform: translateY(0);
             opacity: 1;
         }
-
         .toast.error {
             background: #ef4444;
         }
-
         @media (max-width: 768px) {
             .row {
                 grid-template-columns: 1fr;
@@ -244,14 +212,40 @@
                 <span class="header-icon">🖼️</span>
                 <h1>Nano Image Generator</h1>
             </div>
-
             <form id="generatorForm">
                 <!-- Product Image URL -->
                 <div class="form-group">
                     <label for="imageUrl">Product Image URL</label>
                     <input type="url" id="imageUrl" placeholder="https://example.com/image.jpg" required>
                 </div>
-
+                
+                <!-- Product Name Dropdown -->
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <select id="productName" required>
+                        <option value="">Select a product</option>
+                        <option value="ALCOHOL">ALCOHOL</option>
+                        <option value="SMOKING">SMOKING</option>
+                        <option value="ADDICTION">ADDICTION</option>
+                        <option value="ARTHRIFLOW">ARTHRIFLOW</option>
+                        <option value="CLEARNAILPRO">CLEARNAILPRO</option>
+                        <option value="DOPAMINE">DOPAMINE</option>
+                        <option value="FENGSHUI">FENGSHUI</option>
+                        <option value="FUNGIGONE">FUNGIGONE</option>
+                        <option value="LUCKYFLOE">LUCKYFLOE</option>
+                        <option value="MAGNASIGHT">MAGNASIGHT</option>
+                        <option value="MAGNASLIM">MAGNASLIM</option>
+                        <option value="MAGNASNORE">MAGNASNORE</option>
+                        <option value="MOJOFLOW">MOJOFLOW</option>
+                        <option value="NEUROEASE">NEUROEASE</option>
+                        <option value="NEUROFLOW">NEUROFLOW</option>
+                        <option value="PROSTAFLOW">PROSTAFLOW</option>
+                        <option value="SMOOTHIES">SMOOTHIES</option>
+                        <option value="TRURELIEF">TRURELIEF</option>
+                        <option value="VEINCLEARPRO">VEINCLEARPRO</option>
+                    </select>
+                </div>
+                
                 <!-- Advertorial (Collapsible) -->
                 <div class="form-group advertorial-wrapper" id="advertorialWrapper">
                     <div class="advertorial-header">
@@ -261,7 +255,6 @@
                     <textarea id="advertorial" class="advertorial-textarea" placeholder="Enter your advertorial content..." rows="4"></textarea>
                     <div class="advertorial-preview" onclick="expandAdvertorial()"></div>
                 </div>
-
                 <!-- Settings Row -->
                 <div class="row">
                     <div class="form-group">
@@ -272,7 +265,6 @@
                             <option value="webp">WebP</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="aspectRatio">Aspect Ratio</label>
                         <select id="aspectRatio">
@@ -289,13 +281,11 @@
                             <option value="9:16" selected>9:16</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="imageCount">Image Count</label>
                         <input type="number" id="imageCount" value="5" min="1" max="20">
                     </div>
                 </div>
-
                 <!-- Prompt Section -->
                 <div class="prompt-section">
                     <div class="section-title">Prompt Instructions</div>
@@ -304,21 +294,18 @@
                             <label for="gptInstruction">GPT Instruction</label>
                             <textarea id="gptInstruction" placeholder="Enter GPT prompt instructions..." rows="6"></textarea>
                         </div>
-
                         <div class="form-group">
                             <label for="claudeInstruction">Claude Instruction</label>
                             <textarea id="claudeInstruction" placeholder="Enter Claude prompt instructions..." rows="6"></textarea>
                         </div>
                     </div>
                 </div>
-
                 <!-- Webhook Section -->
                 <div class="webhook-section">
                     <div class="form-group">
                         <label for="webhookUrl">Webhook URL</label>
                         <input type="url" id="webhookUrl" placeholder="https://your-webhook-url.com/endpoint" value="https://cartclick.app.n8n.cloud/webhook/263d309b-2b9b-48f8-9200-d3c3692699f6" required>
                     </div>
-
                     <button type="submit" class="submit-btn">
                         <span>🚀</span>
                         Send to Webhook
@@ -327,10 +314,8 @@
             </form>
         </div>
     </div>
-
     <!-- Toast Notification -->
     <div class="toast" id="toast"></div>
-
     <script>
         // Collapsible Advertorial Functions
         function collapseAdvertorial() {
@@ -343,13 +328,11 @@
                 wrapper.classList.add('collapsed');
             }
         }
-
         function expandAdvertorial() {
             const wrapper = document.getElementById('advertorialWrapper');
             wrapper.classList.remove('collapsed');
             document.getElementById('advertorial').focus();
         }
-
         // Toast Notification
         function showToast(message, isError = false) {
             const toast = document.getElementById('toast');
@@ -361,13 +344,13 @@
                 toast.classList.remove('show');
             }, 3000);
         }
-
         // Form Submission
         document.getElementById('generatorForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-
+            
             const payload = {
                 image_url_1: document.getElementById('imageUrl').value,
+                product_name: document.getElementById('productName').value,
                 output_format: document.getElementById('outputFormat').value,
                 image_size: document.getElementById('aspectRatio').value,
                 advertorial: document.getElementById('advertorial').value,
@@ -375,9 +358,7 @@
                 gpt_instruction: document.getElementById('gptInstruction').value,
                 claude_instruction: document.getElementById('claudeInstruction').value
             };
-
             const webhookUrl = document.getElementById('webhookUrl').value;
-
             try {
                 const response = await fetch(webhookUrl, {
                     method: 'POST',
@@ -386,7 +367,6 @@
                     },
                     body: JSON.stringify(payload)
                 });
-
                 if (response.ok) {
                     showToast('Image Creation Request Sent');
                 } else {
